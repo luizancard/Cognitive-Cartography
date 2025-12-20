@@ -1,0 +1,47 @@
+{
+    "nodes": [
+        {
+            "id": "log_prop_produto",
+            "label": "Log do Produto",
+            "base": false
+        },
+        {
+            "id": "log_def",
+            "label": "Definição de Log",
+            "base": false
+        },
+        {
+            "id": "exp_fund",
+            "label": "Exponenciação",
+            "base": true
+        },
+        {
+            "id": "potencia",
+            "label": "Potenciação Básica",
+            "base": true
+        },
+        {
+            "id": "mult",
+            "label": "Multiplicação",
+            "base": true
+        }
+    ],
+    "edges": [
+        {
+            "source": "log_def",
+            "target": "log_prop_produto"
+        },
+        {
+            "source": "exp_fund",
+            "target": "log_def"
+        },
+        {
+            "source": "potencia",
+            "target": "exp_fund"
+        },
+        {
+            "source": "mult",
+            "target": "potencia"
+        }
+    ]
+}
